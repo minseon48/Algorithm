@@ -26,3 +26,35 @@
 
  <p>각 테스트 케이스에 대해서, 입력으로 주어진 문장의 단어를 모두 뒤집어 출력한다.</p>
 
+
+
+### 코드
+
+<p>import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < T; i++) {
+            String[] str = br.readLine().split(" ");
+            StringBuilder sb = new StringBuilder();
+
+            for (String x : str) {
+                String s = new StringBuilder(x).reverse().toString();
+                sb.append(s).append(" ");
+            }
+
+            System.out.println(sb.toString().trim());
+        }
+
+
+    }
+}
+</p>
+
