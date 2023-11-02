@@ -28,31 +28,10 @@
 
 
 
-### 코드
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine());
-
-        for (int i = 0; i < T; i++) {
-            String[] str = br.readLine().split(" ");
-            StringBuilder sb = new StringBuilder();
-
-            for (String x : str) {
-                String s = new StringBuilder(x).reverse().toString();
-                sb.append(s).append(" ");
-            }
-
-            System.out.println(sb.toString().trim());
-        }
-
-
-    }
-}
+### 풀이
+<p>테스트 케이스 T개, 문자열을 한 줄을 입력 받고 공백을 기준으로 split으로 나눈 후 String 배열에 넣어준다.
+단어를 뒤집기 위해서 reverse()를 사용해주는데 먼저 StringBuilder 객체를 생성한 후 for each 구문으로 한 단어씩 뒤집어준다.
+생성한 StringBuilder 객체 sb에 문자열과 문자열 사이를 구분할 수 있는 공백을 append를 통해 추가해주고 출력해주면 된다.
+스택을 이용한 방법도 있어 스택 유형 문제를 풀 때 다시 풀어봐야 할 것 같다.</p>
 
 
